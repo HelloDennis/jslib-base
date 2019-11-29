@@ -14,7 +14,8 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-    const {npmname, umdname, username, type, module, test, lang, manager} = argv
+    // const {npmname, umdname, username, type, module, test, lang, manager} = argv
+    const {npmname, umdname, username, module, manager} = argv
     
     promptList.push({
         type: 'input',
@@ -34,7 +35,7 @@ function runInitPrompts(pathname, argv) {
             type: 'input',
             message: 'publish to npm name:',
             name: 'npmname',
-            default: pathname,
+            default: '@minimod/' +　pathname,
             validate: function(val) {
                 if (!validate(val).validForNewPackages) {
                     return "Forbidden npm name";
@@ -60,7 +61,7 @@ function runInitPrompts(pathname, argv) {
     if (!username) {
         promptList.push({
             type: 'input',
-            message: 'github user name:',
+            message: 'git user name:',
             name: 'username',
             validate: function(val) {
                 if (!val) {
@@ -70,34 +71,34 @@ function runInitPrompts(pathname, argv) {
             }
         })
     }
-    if (!type) {
-        promptList.push({
-            type: 'list',
-            message: 'use JavaScript|TypeScript:',
-            name: 'type',
-            choices: [
-                'JavaScript',
-                'TypeScript',
-            ],
-            filter: function (value) {
-                return ({
-                    TypeScript: 'ts',
-                    JavaScript: 'js'
-                }[value])
-            }
-        })
-    }
+    // if (!type) {
+    //     promptList.push({
+    //         type: 'list',
+    //         message: 'use TypeScript|JavaScript:',
+    //         name: 'type',
+    //         choices: [
+    //             'TypeScript',
+    //             'JavaScript',
+    //         ],
+    //         filter: function (value) {
+    //             return ({
+    //                 TypeScript: 'ts',
+    //                 JavaScript: 'js'
+    //             }[value])
+    //         }
+    //     })
+    // }
     if (!module) {
         promptList.push({
             type: 'checkbox',
             message: 'use module:',
             name: 'module',
             choices: [
-                'umd',
                 'esm',
+                'umd',
                 'commonjs',
             ],
-            default: ['umd', 'esm', 'commonjs'],
+            default: ['esm', 'umd', 'commonjs'],
             validate: function(val) {
                 if (!val.length) {
                     return "Choose at least one module";
@@ -106,43 +107,43 @@ function runInitPrompts(pathname, argv) {
             }
         })
     }
-    if (!test) {
-        promptList.push({
-            type: 'list',
-            message: 'use tester:',
-            name: 'test',
-            choices: [
-                'mocha',
-                'none',
-            ],
-            filter: function (value) {
-                return ({
-                    mocha: 'mocha',
-                    none: null
-                }[value])
-            }
-        })
-    }
-    if (!lang) {
-        promptList.push({
-            type: 'list',
-            message: 'project language:',
-            name: 'lang',
-            choices: ['Chinese', 'English'],
-            filter: function (value) {
-                return ({
-                    Chinese: 'zh',
-                    English: 'en',
-                }[value])
-            }
-        })
-    }
+    // if (!test) {
+    //     promptList.push({
+    //         type: 'list',
+    //         message: 'use tester:',
+    //         name: 'test',
+    //         choices: [
+    //             'mocha',
+    //             'none',
+    //         ],
+    //         filter: function (value) {
+    //             return ({
+    //                 mocha: 'mocha',
+    //                 none: null
+    //             }[value])
+    //         }
+    //     })
+    // }
+    // if (!lang) {
+    //     promptList.push({
+    //         type: 'list',
+    //         message: 'project language:',
+    //         name: 'lang',
+    //         choices: ['Chinese', 'English'],
+    //         filter: function (value) {
+    //             return ({
+    //                 Chinese: 'zh',
+    //                 English: 'en',
+    //             }[value])
+    //         }
+    //     })
+    // }
     if (!manager) {
         promptList.push({
             type: 'list',
             message: 'package manager:',
             name: 'manager',
-            choices: ['no install', 'npm', 'yarn'],
+            choices: ['npm', 'yarn', 'no install'],
             filter: function (value) {
                 return ({
                     npm: 'npm',

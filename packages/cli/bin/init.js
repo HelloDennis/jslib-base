@@ -6,7 +6,8 @@ const { checkProjectExists } = require('./helpers');
 function init(argv, answers) {
     const cmdPath = process.cwd();
     const {
-        name, npmname, umdname, username, type, module, test, lang, manager
+        // name, npmname, umdname, username, type, module, test, lang, manager
+        name, npmname, umdname, username, module, manager
     } = Object.assign({}, argv, answers);
     const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
@@ -16,10 +17,10 @@ function init(argv, answers) {
         npmname: String(npmname), // 发布到npm的名字，有可能和项目名字不一样，比如带scope
         umdname: String(umdname),
         username: String(username),
-        type,
+        type: 'ts', // 这里暂时固定了使用TypeScript
         module: Array.isArray(module) ? module : module.split(','), // 数组或字符串
-        test,
-        lang,
+        test: 'mocha', // 这里暂时固定了使用mocha
+        lang: 'zh', // 这里暂时固定了使用中文
         manager,
         version: pkg.version,
     };

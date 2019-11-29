@@ -35,17 +35,23 @@ yargs
         }).option('username', {
             alias: 'u',
             describe: '仅初始化用户名称',
-        }).option('type', {
-            alias: 't',
-            describe: '仅初始化 js/ts 选择',
-        }).option('module', {
+        })
+        // 默认只允许使用TypeScript
+        // .option('type', {
+        //     alias: 't',
+        //     describe: '仅初始化 js/ts 选择',
+        // })
+        .option('module', {
             describe: '模块化方案',
-        }).option('test', {
-            describe: '测试方案',
-        }).option('lang', {
-            alias: 'l',
-            describe: '仅初始化中英文选择',
-        }).option('manager', {
+        })
+        // .option('test', {
+        //     describe: '测试方案',
+        // })
+        // .option('lang', {
+        //     alias: 'l',
+        //     describe: '仅初始化中英文选择',
+        // })
+        .option('manager', {
             alias: 'm',
             describe: '选择仓库包管理方式',
         })
