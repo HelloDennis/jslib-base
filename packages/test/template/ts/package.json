@@ -1,5 +1,6 @@
 {
     "scripts": {
+      "testinpage": "npm run lint && rollup -c config/rollup.config.test.js --watch",
       "test": "npm run lint && nyc mocha",
       "coveralls": "nyc report --reporter=text-lcov | coveralls"
     },
