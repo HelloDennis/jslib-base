@@ -1,12 +1,15 @@
 {
-    "scripts": {
-      "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
-      "lint:fix": "eslint -c .eslintrc.js 'src/**/*.ts' --fix"
-    },
-    "devDependencies": {
-      "eslint": "^5.15.1",
-      "@typescript-eslint/eslint-plugin": "^1.4.2",
-      "@typescript-eslint/parser": "^1.4.2"
-    }
+  "scripts": {
+    "lint": "eslint -c .eslintrc.js src/**/*.ts",
+    "lint:fix": "eslint -c .eslintrc.js src/**/*.ts --fix"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.9",
+    "eslint": "^5.15.1",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-serve": "^1.0.1"
   }
-  
+}

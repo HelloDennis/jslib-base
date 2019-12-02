@@ -14,11 +14,11 @@ var banner =
 `;
 
 function getCompiler(opt) {
-    opt = opt || {
-        tsconfigOverride: { compilerOptions : { module: 'ES2015' } }
-    }
+  opt = opt || {
+    tsconfigOverride: { compilerOptions : { module: 'ES2015' } }
+  }
 
-    return typescript(opt);
+  return typescript(opt);
 }
 
 exports.name = '<%=umdname%>';

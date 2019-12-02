@@ -17,43 +17,44 @@ const test = require('@js-lib/test');
 const manager = require('@js-lib/manager');
 
 function init(cmdPath, option) {
-    option.version = pkg.version;
-    
-    config.init(cmdPath, option.pathname, option);
-    root.init(cmdPath, option.pathname, option);
-    package.init(cmdPath, option.pathname, option);
-    license.init(cmdPath, option.pathname, option);
-    readme.init(cmdPath, option.pathname, option);
-    demo.init(cmdPath, option.pathname, option);
-    src.init(cmdPath, option.pathname, option);
-    eslint.init(cmdPath, option.pathname, option);
-    rollup.init(cmdPath, option.pathname, option);
-    test.init(cmdPath, option.pathname, option);
-    manager.init(cmdPath, option.pathname, option).then(function() {
-        spinner.succeed('Create project successfully');
-    });
+  option.version = pkg.version;
+
+  config.init(cmdPath, option.pathname, option);
+  root.init(cmdPath, option.pathname, option);
+  package.init(cmdPath, option.pathname, option);
+  license.init(cmdPath, option.pathname, option);
+  readme.init(cmdPath, option.pathname, option);
+  demo.init(cmdPath, option.pathname, option);
+  src.init(cmdPath, option.pathname, option);
+  eslint.init(cmdPath, option.pathname, option);
+  rollup.init(cmdPath, option.pathname, option);
+  test.init(cmdPath, option.pathname, option);
+  manager.init(cmdPath, option.pathname, option).then(function () {
+    spinner.succeed('Create project successfully');
+  });
 }
+
 function update(cmdPath, option, answers) {
-    option.version = pkg.version;
-    
-    if (answers.root) {
-        root.update(cmdPath, option);
-    }
-    if (answers.package) {
-        package.update(cmdPath, option);
-    }
-    if (answers.src) {
-        src.update(cmdPath, option);
-    }
-    if (answers.eslint) {
-        eslint.update(cmdPath, option);
-    }
-    if (answers.rollup) {
-        rollup.update(cmdPath, option);
-    }
-    if (answers.test) {
-        test.update(cmdPath, option);
-    }
+  option.version = pkg.version;
+
+  if (answers.root) {
+    root.update(cmdPath, option);
+  }
+  if (answers.package) {
+    package.update(cmdPath, option);
+  }
+  if (answers.src) {
+    src.update(cmdPath, option);
+  }
+  if (answers.eslint) {
+    eslint.update(cmdPath, option);
+  }
+  if (answers.rollup) {
+    rollup.update(cmdPath, option);
+  }
+  if (answers.test) {
+    test.update(cmdPath, option);
+  }
 }
 
 exports.init = init;
