@@ -20,11 +20,17 @@ module.exports = {
     // ],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-function-return-type': ['off'],
+    "@typescript-eslint/no-inferrable-types": [
+      "warn",
+      {
+        "ignoreParameters": true
+      }
+    ],
     'no-console': ['warn'],
-    // "linebreak-style": [
-    //   "error",
-    //   "unix"
-    // ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
     // "quotes": [
     //   "error",
     //   "single"

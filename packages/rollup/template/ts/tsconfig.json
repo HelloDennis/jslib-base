@@ -3,7 +3,7 @@
     "target": "ES5",
     "module": "commonjs",
     "declaration": true,
-    "declarationDir": "dist"
+    "newLine": "LF"
   },
   "include": [
     "src/**/*.ts",
