@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es5",
+    "lib": [
+      "webworker",
+      "es6",
+      "es5",
+      "dom"
+    ],
+    "name": "文档"
+  },
+  "exclude": [
+    "node_moudles",
+    "dist",
+    "test"
+  ],
+  "includes": [
+	  "./src/"
+  ],
+  "out": "./doc",
+  "ignoreCompilerErrors": true,
+  "excludeExternals": true,
+  "excludeNotExported": true,
+  "disableOutputCheck": true,
+  "hideGenerator": true,
+  "mode": "modules",
+  "readme": "none",
+  "hideSources": true,
+  "theme": "default",
+  "plugins": [
+    "typedoc-plugin-markdown"
+  ]
+}

@@ -1,12 +1,15 @@
 {
   "scripts": {
     "test": "npm run lint && cross-env NODE_ENV=test nyc mocha",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "doc": "./node_modules/.bin/typedoc --options typedoc.json ./src/index.ts"
   },
   "devDependencies": {
     "@babel/register": "7.0.0",
     "babel-plugin-istanbul": "5.1.0",
     "coveralls": "3.0.2",
+    "@microsoft/tsdoc": "^0.12.16",
+    "typedoc": "^0.15.4",
     "expect.js": "0.3.1",
     "mocha": "3.5.3",
     "nyc": "13.1.0",
