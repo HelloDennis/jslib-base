@@ -50,20 +50,20 @@ $ npm install --save <%=npmname%>
 For node environment：
 
 ```js
-var base = require('<%=npmname%>');
+var mylib = require('<%=npmname%>');
 ```
 
 For webpack or similar environment：
 
 ```js
-import base from '<%=npmname%>';
+import mylib from '<%=npmname%>';
 ```
 
 For requirejs environment:
 
 ```js
-requirejs(['node_modules/<%=npmname%>/dist/index.aio.js'], function (lib) {
-    // do something...
+requirejs(['node_modules/<%=npmname%>/dist/index.aio.js'], function (mylib) {
+  // do something...
 })
 ```
 

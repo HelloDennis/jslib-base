@@ -10,6 +10,7 @@
     "coveralls": "3.0.2",
     "@microsoft/tsdoc": "^0.12.16",
     "typedoc": "^0.15.4",
+    "typedoc-plugin-markdown": "^2.2.14",
     "expect.js": "0.3.1",
     "mocha": "3.5.3",
     "nyc": "13.1.0",
