@@ -6,15 +6,15 @@ var mylib = require('../src/index.js');
 describe('单元测试', function () {
   this.timeout(1000);
 
-  describe('功能1', function () {
-    it('相等', function () {
+  describe('测试name', function () {
+    it('name应该为base', function () {
       expect(mylib.name).to.equal('base');
     });
   });
 
-  describe('功能2', function () {
-    it('不相等', function () {
-      expect(mylib.name).not.to.equal(1);
+  describe('测试greeter', function () {
+    it('greeter输出结果正确', function () {
+      expect(mylib.greeter('Tom')).to.equal('Hello, Tom');
     });
   });
 });

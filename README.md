@@ -19,6 +19,7 @@ The best third party `JS|TS` library scaffold. fast to create the framework for 
 - Supports multi environment, including default browsers, Node, AMD, CMD, Webpack, Rollup, Fis and so on.
 - Integrated code style lint(eslint).
 - Integrated unit test environment(mocha).
+- Integrated document generation tool(typedoc).
 - Integrated test coverage(istanbul+nyc).
 - Integrated continuous integration tool [travis-ci](https://www.travis-ci.org/)
 - Supports [sideEffects](https://github.com/webpack/webpack/tree/master/examples/side-effects)

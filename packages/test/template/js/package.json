@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha",
+    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha test/test.ts",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "doc": "./node_modules/.bin/typedoc --options typedoc.json ./src/index.ts"
   },
