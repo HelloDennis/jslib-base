@@ -77,7 +77,7 @@ The npm scripts
 
 ```bash
 $ npm run lint
-$ npm run test
+$ npm run test # 脱离浏览器环境运行单测
 $ npm run testinbrowser # 在页面中运行单测（适合于需要依赖于DOM或window、document的情况），通过浏览器访问[http://localhost:9999/test/browser/](http://localhost:9999/test/browser/)查看
 $ npm run build
 $ npm run release
