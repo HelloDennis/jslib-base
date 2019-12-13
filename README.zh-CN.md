@@ -64,12 +64,15 @@ $ jslib new -c
 
 ```
 .
+├── config 打包配置
+├── coverage 单元测试覆盖率报告
 ├── demo 使用demo
-├── dist 编译产出代码
-├── doc 项目文档
+├── dist 编译产出的代码
+├── doc 生成的API文档
 ├── src 源代码目录
-├── test 单元测试
+├── test 单元测试目录
 ├── CHANGELOG.md 变更日志
+├── README.md 项目上手文档
 └── TODO.md 计划功能
 ```
 
